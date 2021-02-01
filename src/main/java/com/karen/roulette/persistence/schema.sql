@@ -3,8 +3,8 @@
 -- ----------------------------------------------
 CREATE TABLE IF NOT EXISTS BET_OPTIONS (
     bet_option_id serial NOT NULL,
-    opcion VARCHAR ( 10 ) NOT NULL,
-    color BOOLEAN NOT NULL,
+    number INT,
+    color VARCHAR(20) NOT NULL,
     PRIMARY KEY(bet_option_id)
     );
 -- ----------------------------------------------
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS BETS (
     bet_id serial NOT NULL,
     roulette_id INT NOT NULL,
     bet_option_id INT NOT NULL,
-    usuario_id VARCHAR (20) NOT NULL,
+    user_id VARCHAR (20) NOT NULL,
     money INT NOT NULL,
     PRIMARY KEY(bet_id),
     FOREIGN KEY (roulette_id)
