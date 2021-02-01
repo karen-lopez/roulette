@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class betService {
+public class BetService {
     @Autowired
     private BetRepositoryDomain betRepository;
 
@@ -21,8 +21,10 @@ public class betService {
         return betRepository.getByRouletteId(rouletteId);
     }
 
-    public void setBet(BetDomain bet){
+    public boolean setBet(BetDomain bet){
         betRepository.setBet(bet);
+        if(getById(bet.getBetId()).isPresent()) return true;
+        else return false;
     }
 
 }
