@@ -1,4 +1,4 @@
-package com.karen.roulette.domain.repository;
+package com.karen.roulette.persistence;
 
 import com.karen.roulette.persistence.crud.RouletteCrudRepository;
 import com.karen.roulette.persistence.entity.Roulette;
@@ -23,7 +23,7 @@ public class RouletteRepository {
         return rouletteCrudRepository.updateRouletteSetWinningNumberForId(winningNumber, rouletteId);
     }
 
-    public void setRoulette(boolean available){
-        rouletteCrudRepository.insertRoulette(available);
+    public void setRoulette(Integer rouletteId, boolean available){
+        rouletteCrudRepository.insertRoulette(rouletteId, available);
     }
 }

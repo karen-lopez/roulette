@@ -3,7 +3,7 @@
 -- ----------------------------------------------
 CREATE TABLE IF NOT EXISTS BET_OPTIONS (
     bet_option_id serial NOT NULL,
-    number INT,
+    option VARCHAR(20),
     color VARCHAR(20) NOT NULL,
     PRIMARY KEY(bet_option_id)
     );

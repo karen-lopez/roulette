@@ -19,7 +19,7 @@ public interface RouletteCrudRepository extends CrudRepository<Roulette, Integer
             nativeQuery = true)
     int updateRouletteSetWinningNumberForId(@Param("winningNumber") Integer winningNumber, @Param("rouletteId") Integer rouletteId);
     @Modifying
-    @Query(value ="insert into roulettes (available) values (:available)",
+    @Query(value ="insert into bet_options (roulette_id, available) values (:rouletteId, :available)",
             nativeQuery = true)
-    void insertRoulette(@Param("available") boolean available);
+    void insertRoulette(@Param("rouletteId") Integer rouletteId, @Param("available") boolean available);
 }

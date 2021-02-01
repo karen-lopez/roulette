@@ -13,8 +13,8 @@ public class Bet {
     private Integer rouletteId;
     @Column(name = "bet_option_id")
     private Integer betOptionId;
-    @Column(name = "usuario_id")
-    private String usuarioId;
+    @Column(name = "user_id")
+    private String userId;
     @Column(name = "money")
     private Integer money;
 
@@ -42,12 +42,12 @@ public class Bet {
         this.betOptionId = betOptionId;
     }
 
-    public String getUsuarioId() {
-        return usuarioId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUsuarioId(String usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Integer getMoney() {

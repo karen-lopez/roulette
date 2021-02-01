@@ -9,8 +9,8 @@ public class BetOption {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bet_option_id")
     private Integer betOptionId;
-    @Column(name = "opcion")
-    private String opcion;
+    @Column(name = "option")
+    private String option;
     @Column(name = "color")
     private boolean color;
 
@@ -22,12 +22,12 @@ public class BetOption {
         this.betOptionId = betOptionId;
     }
 
-    public String getOpcion() {
-        return opcion;
+    public String getOption() {
+        return option;
     }
 
-    public void setOpcion(String opcion) {
-        this.opcion = opcion;
+    public void setOpcion(String option) {
+        this.option = option;
     }
 
     public boolean isColor() {
