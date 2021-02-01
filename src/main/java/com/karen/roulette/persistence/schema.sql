@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS BETS (
     roulette_id INT NOT NULL,
     bet_option_id INT NOT NULL,
     usuario_id VARCHAR (20) NOT NULL,
-    dinero INT NOT NULL,
+    money INT NOT NULL,
     PRIMARY KEY(bet_id),
     FOREIGN KEY (roulette_id)
     REFERENCES ROULETTES (roulette_id),
