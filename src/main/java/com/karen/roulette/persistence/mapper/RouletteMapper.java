@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface RouletteMapper {
     @Mappings({
@@ -14,8 +16,10 @@ public interface RouletteMapper {
             @Mapping(source = "winningNumber", target = "winnigNumber"),
             @Mapping(source = "available", target = "available"),
     })
-    RouletteDmain toRoulette(Roulette roulette);
+    RouletteDmain toRouletteDmain(Roulette roulette);
+    List<RouletteDmain> toRouletteDmains(List<Roulette> roulette);
 
     @InheritInverseConfiguration
-    Roulette toRouletteDmain(RouletteDmain rouletteDmain);
+    Roulette toRoulette(RouletteDmain rouletteDmain);
+
 }

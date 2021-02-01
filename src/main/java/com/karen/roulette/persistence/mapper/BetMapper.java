@@ -1,10 +1,14 @@
 package com.karen.roulette.persistence.mapper;
 
 import com.karen.roulette.domain.BetDomain;
+import com.karen.roulette.domain.RouletteDmain;
 import com.karen.roulette.persistence.entity.Bet;
+import com.karen.roulette.persistence.entity.Roulette;
 import org.mapstruct.*;
 
-@Mapper(componentModel = "spring")
+import java.util.List;
+
+@Mapper(componentModel = "spring", uses = {RouletteMapper.class})
 public interface BetMapper {
     @Mappings({
             @Mapping(source = "betId", target = "betId"),
@@ -13,9 +17,10 @@ public interface BetMapper {
             @Mapping(source = "money", target = "money"),
             @Mapping(source = "userId", target = "user"),
     })
-    BetDomain toBet(Bet bet);
+    BetDomain toBetDomain(Bet bet);
+    List<BetDomain> toBets(List<Bet> bet);
 
     @InheritInverseConfiguration
-    Bet toBetDomain(BetDomain betDomain);
+    Bet toBet(BetDomain betDomain);
 
 }
