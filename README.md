@@ -1,8 +1,8 @@
 # roulette
 clean code test
 
-API for Online Roulette, developed with Java Spring
--create roulette
--create bets
--list all bets
--list all roulettes
+<h4>API for Online Roulette, developed with Java Spring </h4>
+Create roulette
+Create bets
+List all bets
+List all roulettes
